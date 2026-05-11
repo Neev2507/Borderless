@@ -1,3 +1,5 @@
+import { Button } from "@/components/button";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-surface p-16">
@@ -7,9 +9,16 @@ export default function Home() {
       <p className="text-body-md text-on-surface-variant mb-8">
         Built for international students.
       </p>
-      <button className="bg-primary text-on-primary px-6 py-3 rounded-md text-label-md">
-        Start free
-      </button>
+
+      <div className="flex gap-3">
+        <Button variant="primary">Start free</Button>
+        <Button variant="secondary">Try the remittance tool</Button>
+      </div>
+
+      <div className="mt-8 flex gap-3">
+        <Button variant="primary" disabled>Disabled primary</Button>
+        <Button variant="secondary" disabled>Disabled secondary</Button>
+      </div>
     </div>
   );
 }
