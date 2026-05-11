@@ -14,11 +14,13 @@ export function Button({
   type = "button",
 }: ButtonProps) {
   const base =
-    "px-6 py-3 rounded-md text-label-md transition-opacity disabled:opacity-50 disabled:cursor-not-allowed";
+    "px-6 py-[13px] rounded-md font-sans text-base font-normal leading-6 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed";
 
   const variants = {
-    primary: "bg-primary text-on-primary hover:opacity-90",
-    secondary: "bg-transparent border border-primary text-primary hover:bg-primary/5",
+    primary:
+      "bg-primary text-on-primary shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] hover:opacity-90",
+    secondary:
+      "bg-transparent border border-primary text-primary hover:bg-primary/5",
   };
 
   return (
