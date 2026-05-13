@@ -1,5 +1,5 @@
 type ButtonProps = {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "ghost";
   children: React.ReactNode;
   onClick?: () => void;
   disabled?: boolean;
@@ -21,6 +21,8 @@ export function Button({
       "bg-primary text-on-primary px-6 py-[13px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] hover:opacity-90",
     secondary:
       "bg-transparent border border-outline-variant text-primary px-6 py-3 hover:bg-primary/5",
+    ghost:
+      "bg-transparent text-primary px-2 py-2 hover:opacity-70",
   };
 
   return (

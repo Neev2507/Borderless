@@ -1,8 +1,11 @@
 import { Button } from "@/components/button";
+import { Nav } from "@/components/nav";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-surface flex flex-col">
+      <Nav />
+
       <main className="flex-1 px-16 py-12">
         <h1 className="text-headline-lg text-on-surface font-serif mb-4 max-w-3xl">
           You're 10,000 miles from home. Your finances shouldn't feel like it.

@@ -75,6 +75,7 @@ export default function TestPage() {
           </div>
         </section>
       </div>
+      <Button variant="ghost">Sign In</Button>
     </div>
   );
 }
