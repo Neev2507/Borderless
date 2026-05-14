@@ -2,6 +2,8 @@ import Image from "next/image";
 import { Button } from "@/components/button";
 import { Card } from "@/components/card";
 import { Nav } from "@/components/nav";
+import { Footer } from "@/components/footer";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -22,7 +24,9 @@ export default function Home() {
 
               <div className="flex gap-3 mb-12">
                 <Button variant="primary">Start free</Button>
-                <Button variant="secondary">Try the remittance tool</Button>
+                <Link href="/tools/remittance">
+  <Button variant="secondary">Try the remittance tool</Button>
+</Link>
               </div>
 
               <div className="border-t border-outline-variant pt-6">
@@ -61,59 +65,32 @@ export default function Home() {
 
             <div className="grid grid-cols-3 gap-6">
               <Card
-                pill="Day 1 - 30"
-                title="Arrival & Setup"
-                body="Open your US bank account before you land. Instantly access digital debit cards and set up your initial living expenses safely."
-                features={["Pre-arrival account creation", "Instant virtual debit card"]}
-              />
+  pill="Day 1 - 30"
+  title="Arrival & Setup"
+  body="We walk you through picking the right US bank for your visa, what documents to bring, and how to avoid the fees most students don't see coming."
+  features={["Bank picker by visa type", "Account opening checklist"]}
+/>
 
-              <Card
-                pill="Month 1 - 6"
-                title="Tuition & Transfers"
-                body="Navigate large cross-border payments with transparent rates. Start building a localized financial history without an SSN."
-                features={["Zero-fee tuition remittance", "SSN-free credit reporting"]}
-                highlighted
-              />
+<Card
+  pill="Month 1 - 6"
+  title="Tuition & Transfers"
+  body="Compare every way to send money and pay tuition — see the real cost of Wise, Remitly, and bank wires side by side. Start building US credit without an SSN."
+  features={["Live remittance rate comparison", "Credit building without an SSN"]}
+  highlighted
+/>
 
-              <Card
-                pill="Year 1 - 2+"
-                title="Growth & Credit"
-                body="Transition to premium credit products, manage OPT/CPT income, and prepare for long-term residency or post-grad transitions."
-                features={["Advanced credit building", "Income management tools"]}
-              />
+<Card
+  pill="Year 1 - 2+"
+  title="Growth & Credit"
+  body="Navigate OPT and CPT income, understand your tax obligations as a non-resident, and stay ahead of the financial deadlines tied to your visa status."
+  features={["OPT/CPT income guidance", "Visa-linked financial alerts"]}
+/>
             </div>
           </div>
         </section>
       </main>
 
-      <footer className="w-full border-t border-outline-variant bg-surface-lowest">
-  <div className="max-w-[1200px] mx-auto px-16 py-20">
-    <div className="flex items-center justify-between mb-6">
-      <a href="/" className="font-sans text-base font-bold text-primary">
-        Borderless
-      </a>
-
-      <div className="flex items-center gap-8">
-        <a href="#" className="font-sans text-base font-normal leading-6 text-outline underline hover:text-primary transition-colors">
-          Privacy Policy
-        </a>
-        <a href="#" className="font-sans text-base font-normal leading-6 text-outline underline hover:text-primary transition-colors">
-          Terms of Service
-        </a>
-        <a href="#" className="font-sans text-base font-normal leading-6 text-outline underline hover:text-primary transition-colors">
-          Compliance
-        </a>
-        <a href="#" className="font-sans text-base font-normal leading-6 text-outline underline hover:text-primary transition-colors">
-          Security
-        </a>
-      </div>
-    </div>
-
-    <p className="font-sans text-sm font-normal text-outline">
-      © 2026 Borderless. Built for international students. Not a bank, broker, or advisor.
-    </p>
-  </div>
-</footer>
+     <Footer />
     </div>
   );
 }
