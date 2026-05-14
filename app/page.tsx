@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/button";
+import { Card } from "@/components/card";
 import { Nav } from "@/components/nav";
 
 export default function Home() {
@@ -42,6 +43,43 @@ export default function Home() {
                 height={524}
                 className="rounded-lg shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] w-full h-auto"
                 priority
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className="max-w-[1200px] mx-auto bg-surface-lowest">
+          <div className="px-16 py-16 flex flex-col gap-12">
+            <div className="max-w-[672px]">
+              <h2 className="font-serif text-headline-md font-bold text-primary mb-3">
+                Your journey, mapped.
+              </h2>
+              <p className="font-sans text-base font-normal leading-6 text-on-surface-variant">
+                We understand the critical timeline of setting up life in a new country. Our tools are designed to anticipate what you need, exactly when you need it.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-3 gap-6">
+              <Card
+                pill="Day 1 - 30"
+                title="Arrival & Setup"
+                body="Open your US bank account before you land. Instantly access digital debit cards and set up your initial living expenses safely."
+                features={["Pre-arrival account creation", "Instant virtual debit card"]}
+              />
+
+              <Card
+                pill="Month 1 - 6"
+                title="Tuition & Transfers"
+                body="Navigate large cross-border payments with transparent rates. Start building a localized financial history without an SSN."
+                features={["Zero-fee tuition remittance", "SSN-free credit reporting"]}
+                highlighted
+              />
+
+              <Card
+                pill="Year 1 - 2+"
+                title="Growth & Credit"
+                body="Transition to premium credit products, manage OPT/CPT income, and prepare for long-term residency or post-grad transitions."
+                features={["Advanced credit building", "Income management tools"]}
               />
             </div>
           </div>
