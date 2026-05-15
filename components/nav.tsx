@@ -15,6 +15,9 @@ export function Nav() {
           <a href="#" className="font-sans text-base font-normal leading-6 text-on-surface-variant hover:text-primary transition-colors">
             Resources
           </a>
+          <a href="/pricing" className="font-sans text-base font-normal leading-6 text-on-surface-variant hover:text-primary transition-colors">
+            Pricing
+          </a>
           <a href="#" className="font-sans text-base font-normal leading-6 text-on-surface-variant hover:text-primary transition-colors">
             Support
           </a>

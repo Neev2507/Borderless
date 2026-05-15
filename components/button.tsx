@@ -4,6 +4,7 @@ type ButtonProps = {
   onClick?: () => void;
   disabled?: boolean;
   type?: "button" | "submit";
+  className?: string;
 };
 
 export function Button({
@@ -12,6 +13,7 @@ export function Button({
   onClick,
   disabled = false,
   type = "button",
+  className = "",
 }: ButtonProps) {
   const base =
     "rounded-md font-sans text-base font-normal leading-6 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed";
@@ -30,7 +32,7 @@ export function Button({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`${base} ${variants[variant]}`}
+      className={`${base} ${variants[variant]} ${className}`}
     >
       {children}
     </button>
