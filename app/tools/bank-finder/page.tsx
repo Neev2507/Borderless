@@ -745,7 +745,7 @@ function ResultScreen({
         </div>
 
         <a
-          href="#"
+          href="/dashboard"
           className="flex items-center gap-2 bg-primary text-white font-sans text-sm font-medium px-8 py-3 rounded-full hover:opacity-90 transition-opacity"
         >
           Take me to my dashboard
